@@ -67,11 +67,11 @@ const randomizedDeck = () => {
     deck[i] = deck[j]
     deck[j] = temp
   }
-  console.log(deck);
+  // console.log(deck)  --uncomment for testing (when using $ node index.js)
   return deck
 }
 
-randomizedDeck()
+// randomizedDeck()  --uncomment for testing (when using node index.js)
 
 module.exports = {
   randomizedDeck:randomizedDeck
