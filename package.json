@@ -1,6 +1,6 @@
 {
   "name": "deck-o-cards",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A simple single function that returns a randomized single deck of 52 cards as an array of arrays: [[ '♠️Jack', 10 ], [ '♦️9', 9 ], [ '♣️King', 10 ] ...]",
   "main": "index.js",
   "scripts": {
