@@ -1,0 +1,30 @@
+{
+  "name": "deck-o-cards",
+  "version": "2.0.0",
+  "description": "A simple single function that returns a randomized single deck of 52 cards as an array of arrays: [[ '♠️Jack', 10 ], [ '♦️9', 9 ], [ '♣️King', 10 ] ...]",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DanielDwyer/deck-o-cards.git"
+  },
+  "keywords": [
+    "card",
+    "games",
+    "blackjack",
+    "21",
+    "casino",
+    "fun"
+  ],
+  "author": "danielpatrickdwyer@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanielDwyer/deck-o-cards/issues"
+  },
+  "homepage": "https://github.com/DanielDwyer/deck-o-cards#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
