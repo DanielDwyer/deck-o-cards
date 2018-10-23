@@ -2,4 +2,8 @@
 
 This small, meaningless NPM package will be a place to showcase TDD.
 
-1. Set up unit testing infrastructure using Mocha and Chai
+1. Set up unit testing infrastructure using Mocha and Chai --- Present but not working, see below:
+
+> ./node_modules/mocha/bin/mocha
+
+sh: ./node_modules/mocha/bin/mocha: No such file or directory
