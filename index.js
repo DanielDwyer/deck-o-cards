@@ -1,78 +1,28 @@
-'use strict'
+const types = ['❤️', '♠️', '♦️', '♣️'];
+const values = [
+  { number: 1, name: 'ace' },
+  { number: 2, name: 'two' },
+  { number: 3, name: 'three' },
+  { number: 4, name: 'four' },
+  { number: 5, name: 'five' },
+  { number: 6, name: 'six' },
+  { number: 7, name: 'seven' },
+  { number: 8, name: 'eight' },
+  { number: 9, name: 'nine' },
+  { number: 10, name: 'ten' },
+  { number: 10, name: 'jack' },
+  { number: 10, name: 'queen' },
+  { number: 10, name: 'king' },
+];
 
 const randomizedDeck = () => {
+  let mySet = new Set();
+  do {
+    let card = Object.assign({}, values[Math.floor(Math.random() * values.length)]);
+    card.type = types[Math.floor(Math.random() * types.length)];
+    mySet.add(card); 
+  } while (mySet.size < 52);
+  if (mySet.size === 52) return mySet;
+};
 
-  var deck = [
-      ["❤️", "Ace", 11],
-      ["❤️", "Two", 2],
-      ["❤️", "Three", 3],
-      ["❤️", "Four", 4],
-      ["❤️", "Five", 5],
-      ["❤️", "Six", 6],
-      ["❤️", "Seven", 7],
-      ["❤️", "Eight", 8],
-      ["❤️", "Nine", 9],
-      ["❤️", "Ten", 10],
-      ["❤️", "Jack", 10],
-      ["❤️", "Queen", 10],
-      ["❤️", "King", 10],
-      ["♠️", "Ace", 11],
-      ["♠️", "Two", 2],
-      ["♠️", "Three", 3],
-      ["♠️", "Four", 4],
-      ["♠️", "Five", 5],
-      ["♠️", "Six", 6],
-      ["♠️", "Seven", 7],
-      ["♠️", "Eight", 8],
-      ["♠️", "Nine", 9],
-      ["♠️", "Ten", 10],
-      ["♠️", "Jack", 10],
-      ["♠️", "Queen", 10],
-      ["♠️", "King", 10],
-      ["♦️", "Ace", 11],
-      ["♦️", "Two", 2],
-      ["♦️", "Three", 3],
-      ["♦️", "Four", 4],
-      ["♦️", "Five", 5],
-      ["♦️", "Six", 6],
-      ["♦️", "Seven", 7],
-      ["♦️", "Eight", 8],
-      ["♦️", "Nine", 9],
-      ["♦️", "Ten", 10],
-      ["♦️", "Jack", 10],
-      ["♦️", "Queen", 10],
-      ["♦️", "King", 10],
-      ["♣️", "Ace", 11],
-      ["♣️", "Two", 2],
-      ["♣️", "Three", 3],
-      ["♣️", "Four", 4],
-      ["♣️", "Five", 5],
-      ["♣️", "Six", 6],
-      ["♣️", "Seven", 7],
-      ["♣️", "Eight", 8],
-      ["♣️", "Nine", 9],
-      ["♣️", "Ten", 10],
-      ["♣️", "Jack", 10],
-      ["♣️", "Queen", 10],
-      ["♣️", "King", 10],
-  ]
-
-  var i = 0
-    , j = 0
-    , temp = null
-
-  for (i = deck.length - 1; i > 0; i -= 1) {
-    j = Math.floor(Math.random() * (i + 1))
-    temp = deck[i]
-    deck[i] = deck[j]
-    deck[j] = temp
-  }
-  // console.log(deck)  --uncomment for testing (when using $ node index.js)
-  return deck
-}
-
-// randomizedDeck()  --uncomment for testing (when using node index.js)
-
-module.exports = {
-  randomizedDeck:randomizedDeck
-}
+module.exports = randomizedDeck;

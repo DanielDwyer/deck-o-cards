@@ -1,7 +1,13 @@
 # deck-o-cards
 
+![Downloads](https://img.shields.io/npm/dw/deck-o-cards.svg)
+![Downloads](https://img.shields.io/npm/dm/deck-o-cards.svg)
+![Downloads](https://img.shields.io/npm/dt/deck-o-cards.svg)
+![npm version](https://img.shields.io/npm/v/deck-o-cards.svg)
+![License](https://img.shields.io/npm/l/deck-o-cards.svg)
 
-This Node Package has a single purpose: to return a single deck of 52 playing cards completely randomized. It is then up to you how to use the randomized deck: black jack, poker, gin rummy, guessing games. It returns an array of arrays: [[ '♠️', 'Jack', 10 ], [ '♦️', 'Nine', 9 ], [ '♣️', 'King', 10 ] ...]
+
+This Node Package has a single purpose: to return one deck of 52 playing cards that are completely randomized. It is then up to you how to use the randomized deck: black jack, poker, gin rummy, guessing games. It returns an array of arrays: [[ '♠️', 'Jack', 10 ], [ '♦️', 'Nine', 9 ], [ '♣️', 'King', 10 ] ...]
 
 ## How To Use
 #### Install it via npm:
@@ -10,71 +16,71 @@ $ npm i deck-o-cards
 ```
 #### Require Locally:
 ```js
-var doc = require('deck-o-cards')
+const deckOCards = require('deck-o-cards');
 ```
 #### Call Locally:
 ```js
-var deck = doc.randomizedDeck()
-/*
-var deck =
-  [ [ '♠️', 'Ace', 11 ],
-  [ '♠️', 'Queen', 10 ],
-  [ '♣️', 'Ace', 11 ],
-  [ '♠️', 'Four', 4 ],
-  [ '❤️', 'Three', 3 ],
-  [ '♦️', 'Seven', 7 ],
-  [ '♦️', 'Three', 3 ],
-  [ '♠️', 'Two', 2 ],
-  [ '♣️', 'Nine', 9 ],
-  [ '♦️', 'Ten', 10 ],
-  [ '♣️', 'Jack', 10 ],
-  [ '♣️', 'King', 10 ],
-  [ '❤️', 'Five', 5 ],
-  [ '♦️', 'Nine', 9 ],
-  [ '♦️', 'Queen', 10 ],
-  [ '♠️', 'Ten', 10 ],
-  [ '♣️', 'Queen', 10 ],
-  [ '♦️', 'Four', 4 ],
-  [ '♣️', 'Five', 5 ],
-  [ '♠️', 'King', 10 ],
-  [ '♣️', 'Seven', 7 ],
-  [ '❤️', 'Ten', 10 ],
-  [ '♣️', 'Two', 2 ],
-  [ '♦️', 'Ace', 11 ],
-  [ '❤️', 'Seven', 7 ],
-  [ '❤️', 'Jack', 10 ],
-  [ '♣️', 'Three', 3 ],
-  [ '♦️', 'Eight', 8 ],
-  [ '♣️', 'Six', 6 ],
-  [ '♦️', 'King', 10 ],
-  [ '♦️', 'Jack', 10 ],
-  [ '♦️', 'Five', 5 ],
-  [ '♠️', 'Five', 5 ],
-  [ '♠️', 'Six', 6 ],
-  [ '♣️', 'Four', 4 ],
-  [ '❤️', 'Two', 2 ],
-  [ '❤️', 'King', 10 ],
-  [ '♣️', 'Ten', 10 ],
-  [ '❤️', 'Nine', 9 ],
-  [ '♣️', 'Eight', 8 ],
-  [ '♠️', 'Jack', 10 ],
-  [ '❤️', 'Four', 4 ],
-  [ '♠️', 'Three', 3 ],
-  [ '❤️', 'Eight', 8 ],
-  [ '❤️', 'Six', 6 ],
-  [ '❤️', 'Ace', 11 ],
-  [ '♠️', 'Seven', 7 ],
-  [ '♠️', 'Eight', 8 ],
-  [ '♦️', 'Six', 6 ],
-  [ '❤️', 'Queen', 10 ],
-  [ '♠️', 'Nine', 9 ],
-  [ '♦️', 'Two', 2 ] ]
-*/
+const deck = deckOCards.randomizedDeck();
+
+deck = {
+  { number: 2, name: 'two', type: '♠️' },
+  { number: 9, name: 'nine', type: '♦️' },
+  { number: 6, name: 'six', type: '♠️' },
+  { number: 1, name: 'ace', type: '♦️' },
+  { number: 10, name: 'ten', type: '♣️' },
+  { number: 10, name: 'jack', type: '♠️' },
+  { number: 10, name: 'jack', type: '♠️' },
+  { number: 10, name: 'jack', type: '❤️' },
+  { number: 10, name: 'ten', type: '♠️' },
+  { number: 2, name: 'two', type: '♠️' },
+  { number: 3, name: 'three', type: '❤️' },
+  { number: 6, name: 'six', type: '♣️' },
+  { number: 8, name: 'eight', type: '♠️' },
+  { number: 10, name: 'king', type: '❤️' },
+  { number: 10, name: 'jack', type: '♣️' },
+  { number: 4, name: 'four', type: '❤️' },
+  { number: 2, name: 'two', type: '❤️' },
+  { number: 10, name: 'jack', type: '♦️' },
+  { number: 2, name: 'two', type: '❤️' },
+  { number: 1, name: 'ace', type: '❤️' },
+  { number: 5, name: 'five', type: '♣️' },
+  { number: 1, name: 'ace', type: '♠️' },
+  { number: 10, name: 'queen', type: '❤️' },
+  { number: 10, name: 'ten', type: '♦️' },
+  { number: 9, name: 'nine', type: '❤️' },
+  { number: 4, name: 'four', type: '♦️' },
+  { number: 8, name: 'eight', type: '♦️' },
+  { number: 4, name: 'four', type: '❤️' },
+  { number: 4, name: 'four', type: '♠️' },
+  { number: 10, name: 'jack', type: '♦️' },
+  { number: 1, name: 'ace', type: '❤️' },
+  { number: 9, name: 'nine', type: '♠️' },
+  { number: 10, name: 'queen', type: '♦️' },
+  { number: 3, name: 'three', type: '♣️' },
+  { number: 3, name: 'three', type: '❤️' },
+  { number: 7, name: 'seven', type: '❤️' },
+  { number: 3, name: 'three', type: '♠️' },
+  { number: 2, name: 'two', type: '♣️' },
+  { number: 1, name: 'ace', type: '♦️' },
+  { number: 4, name: 'four', type: '❤️' },
+  { number: 4, name: 'four', type: '♠️' },
+  { number: 2, name: 'two', type: '❤️' },
+  { number: 10, name: 'jack', type: '♦️' },
+  { number: 6, name: 'six', type: '❤️' },
+  { number: 7, name: 'seven', type: '♣️' },
+  { number: 10, name: 'king', type: '♠️' },
+  { number: 6, name: 'six', type: '❤️' },
+  { number: 9, name: 'nine', type: '♣️' },
+  { number: 9, name: 'nine', type: '♣️' },
+  { number: 6, name: 'six', type: '♠️' },
+  { number: 2, name: 'two', type: '❤️' },
+  { number: 10, name: 'ten', type: '❤️' }
+};
 ```
 
 ### License
 
-MIT Copyright 2018 Daniel P. Dwyer
+MIT Copyright 2020 Daniel P. Dwyer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
