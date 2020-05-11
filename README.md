@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/npm/l/deck-o-cards.svg)
 
 
-This Node Package has a single purpose: to return one deck of 52 playing cards that are completely randomized. It is then up to you how to use the randomized deck: black jack, poker, gin rummy, guessing games. It returns an array of arrays: [[ '♠️', 'Jack', 10 ], [ '♦️', 'Nine', 9 ], [ '♣️', 'King', 10 ] ...]
+This Node Package has a single purpose: to return one deck of 52 playing cards that are completely randomized. It is then up to you how to use the randomized deck: black jack, poker, gin rummy, guessing games. It returns set of cards: `{{ number: 2, name: 'two', type: '♠️' }...}`
 
 ## How To Use
 #### Install it via npm:
