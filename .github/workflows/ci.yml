@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ master, main, develop ]
+    branches: [ main, develop ]
   pull_request:
-    branches: [ master, main, develop ]
+    branches: [ main, develop ]
 
 jobs:
   test:
@@ -46,7 +46,7 @@ jobs:
   publish:
     needs: test
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
