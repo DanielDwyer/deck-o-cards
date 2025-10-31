@@ -1,10 +1,21 @@
 {
   "name": "deck-o-cards",
-  "version": "2.0.31",
-  "description": "A simple single function that returns a randomized single deck of 52 cards as an array of arrays: [[ '♠️Jack', 10 ], [ '♦️9', 9 ], [ '♣️King', 10 ] ...]",
+  "version": "2.1.0",
+  "description": "A simple, efficient function that returns a randomized deck of 52 standard playing cards with full TypeScript support",
   "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ],
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "mocha test/index.test.js",
+    "test:watch": "mocha test/index.test.js --watch",
+    "lint": "eslint index.js test/*.js",
+    "lint:fix": "eslint index.js test/*.js --fix",
+    "format": "prettier --write '**/*.{js,json,md}'",
+    "format:check": "prettier --check '**/*.{js,json,md}'"
   },
   "repository": {
     "type": "git",
@@ -17,17 +28,31 @@
     "blackjack",
     "21",
     "casino",
+    "poker",
     "fun",
     "deck of cards",
-    "deck"
+    "deck",
+    "shuffle",
+    "random",
+    "playing cards",
+    "typescript"
   ],
-  "author": "danielpatrickdwyer@gmail.com",
+  "author": {
+    "name": "Daniel P. Dwyer",
+    "email": "danielpatrickdwyer@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/DanielDwyer/deck-o-cards/issues"
   },
   "homepage": "https://github.com/DanielDwyer/deck-o-cards#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "devDependencies": {
-    "mocha": "^7.1.2"
+    "chai": "^4.3.4",
+    "eslint": "^8.0.0",
+    "mocha": "^10.0.0",
+    "prettier": "^2.7.0"
   }
 }
