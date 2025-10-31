@@ -141,18 +141,18 @@ describe('randomizedDeck', () => {
             card.name === 'two'
               ? 2
               : card.name === 'three'
-                ? 3
-                : card.name === 'four'
-                  ? 4
-                  : card.name === 'five'
-                    ? 5
-                    : card.name === 'six'
-                      ? 6
-                      : card.name === 'seven'
-                        ? 7
-                        : card.name === 'eight'
-                          ? 8
-                          : 9;
+              ? 3
+              : card.name === 'four'
+              ? 4
+              : card.name === 'five'
+              ? 5
+              : card.name === 'six'
+              ? 6
+              : card.name === 'seven'
+              ? 7
+              : card.name === 'eight'
+              ? 8
+              : 9;
           expect(card.number).to.equal(expectedValue);
         } else if (['ten', 'jack', 'queen', 'king'].includes(card.name)) {
           expect(card.number).to.equal(10);
@@ -182,18 +182,18 @@ describe('randomizedDeck', () => {
           card.name === 'two'
             ? 2
             : card.name === 'three'
-              ? 3
-              : card.name === 'four'
-                ? 4
-                : card.name === 'five'
-                  ? 5
-                  : card.name === 'six'
-                    ? 6
-                    : card.name === 'seven'
-                      ? 7
-                      : card.name === 'eight'
-                        ? 8
-                        : 9;
+            ? 3
+            : card.name === 'four'
+            ? 4
+            : card.name === 'five'
+            ? 5
+            : card.name === 'six'
+            ? 6
+            : card.name === 'seven'
+            ? 7
+            : card.name === 'eight'
+            ? 8
+            : 9;
         expect(card.number).to.equal(expectedValue);
       });
 
