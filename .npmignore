@@ -1,0 +1,14 @@
+node_modules/
+test/
+.git/
+.gitignore
+.editorconfig
+.eslintrc.js
+.prettierrc
+.nvmrc
+.github/
+coverage/
+*.log
+.DS_Store
+CHANGELOG.md
+package-lock.json

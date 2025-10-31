@@ -12,17 +12,30 @@ const values = [
   { number: 10, name: 'ten' },
   { number: 10, name: 'jack' },
   { number: 10, name: 'queen' },
-  { number: 10, name: 'king' },
+  { number: 10, name: 'king' }
 ];
 
 const randomizedDeck = () => {
-  let mySet = new Set();
-  do {
-    let card = Object.assign({}, values[Math.floor(Math.random() * values.length)]);
-    card.type = types[Math.floor(Math.random() * types.length)];
-    mySet.add(card); 
-  } while (mySet.size < 52);
-  if (mySet.size === 52) return mySet;
+  const deck = [];
+
+  // Create all 52 unique cards
+  for (const value of values) {
+    for (const type of types) {
+      deck.push({
+        number: value.number,
+        name: value.name,
+        type: type
+      });
+    }
+  }
+
+  // Shuffle using Fisher-Yates algorithm
+  for (let i = deck.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [deck[i], deck[j]] = [deck[j], deck[i]];
+  }
+
+  return deck;
 };
 
 module.exports = randomizedDeck;
